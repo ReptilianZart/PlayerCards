@@ -1,0 +1,22 @@
+query getPlayerCards {
+  players {
+    name 
+    clan
+    country
+    
+    playerData {
+      playerId
+      clanId
+        }
+    
+    playerStats {
+      ovr
+      acc
+      imp
+      ast
+      ent
+      utl
+      exp
+        }
+    }
+}
