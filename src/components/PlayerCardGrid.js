@@ -9,7 +9,6 @@ function PlayerCardGrid() {
     const [players, setPlayers] = useState()
 
     useEffect(() => {
-        console.log("hehe",players)
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -46,7 +45,6 @@ function PlayerCardGrid() {
 
     return (
         <div className="PlayerCardGrid">
-            {console.log(players)}
             {players && players.map(player => (
                 <div key={player.playerData.playerId}>
                     <PlayerCard {... player}/>

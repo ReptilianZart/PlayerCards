@@ -1,0 +1,186 @@
+.PlayerCard {
+    position: flex;
+    width: 439px;
+    height: 739px;
+    left: 159px;
+    top: 82px;
+    margin-bottom: 50px;
+    transition: 5s;
+    mix-blend-mode: normal;
+}
+
+.PlayerCard:hover {
+    transform: scale(15) rotate(33deg) translate(100px, 5%) skew(10deg, 10deg);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+.PlayerCard .PlayerInfoLeft {
+    position: flex;
+    z-index: 2;
+}
+
+.PlayerCard .PlayerInfoLeft .Name{
+    position: flex;
+
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    /* identical to box height, or 28px */
+
+    letter-spacing: 0.04em;
+
+    /* tailwind/blue/50 */
+
+    color: #EFF6FF;
+
+    mix-blend-mode: normal;
+    z-index: 2;
+}
+
+.PlayerCard .PlayerInfoLeft .Clan{
+    position: flex;
+    left: 24.07%;
+    right: 66.67%;
+    top: 55.26%;
+    bottom: 43.19%;
+
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 467;
+    font-size: 14px;
+    line-height: 100%;
+    /* identical to box height, or 14px */
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-variation-settings: 'slnt' -10;
+
+    mix-blend-mode: normal;
+    z-index: 2;
+}
+
+.PlayerCard .PlayerInfoLeft .ovrScore{
+    display: flex;
+    width: 97px;
+    height: 83.74px;
+    left: 329px;
+    top: 411px;
+    z-index: 2;
+}
+
+.PlayerCard .ovrScore .Score{
+    position: flex;
+    left: 46.32%;
+    right: 46.4%;
+    top: 47.08%;
+    bottom: 48.27%;
+
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 100%;
+    /* identical to box height, or 42px */
+
+    text-align: center;
+
+    /* tailwind/blue/50 */
+
+    color: #EFF6FF;
+
+    mix-blend-mode: normal;
+    text-shadow: 0px 2.22204px 6.66611px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.PlayerCard .ovrScore .Attribute{
+    position: flex;
+    left: 44.07%;
+    right: 44.19%;
+    top: 51.67%;
+    bottom: 46.98%;
+
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    /* or 18px */
+
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    mix-blend-mode: normal;
+    text-shadow: 0px 1.08079px 3.24236px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.PlayerCard .PlayerInfoRight{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+
+    width: 64px;
+    height: 28px;
+    right: 184px;
+    top: 473px;
+    z-index: 2;
+}
+
+.PlayerCard .PlayerInfoRight .ClanImage  img{
+    display: flex;
+    width: 28px;
+    height: 28px;
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 2;
+}
+
+.PlayerCard .PlayerInfoRight .CountryImage img{
+    display: flex;
+    width: 24px;
+    height: 16px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 2;
+}
+
+.PlayerCard .TopContainer{
+    position: flex;
+    width: 439px;
+    height: 368px;
+    left: 159px;
+    top: 82px;
+    z-index: 1;
+}
+
+.PlayerCard .TopContainer .PlayerAvatar img{
+    position: flex;
+    left: 17.72%;
+    right: 17.46%;
+    top: 10.96%;
+    bottom: 32.45%;
+}
+
+.PlayerCard .BottomContainer{
+    position: flex;
+    width: 439px;
+    height: 361px;
+    left: 159px;
+    top: 460px;
+    z-index: 1;
+}
+

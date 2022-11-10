@@ -4,14 +4,10 @@ export function useFetch(url) {
     const [data, setData] = useState(null)
     const [isPending, setIsPending] = useState(false)
     const [error, setError] = useState(null)
-
-    console.log("3233232")
     
     useEffect(() => {
-        console.log("hehe11ehnnfjn")
         const fetchData = async () => {
             setIsPending(true)
-            console.log("heheheh")
             try {
                 const res = await fetch(url)
                 if(!res.ok) {
@@ -19,7 +15,6 @@ export function useFetch(url) {
                 }
 
                 const json = await res.json()
-                console.log(res)
 
                 setIsPending(false)
                 setData(json)

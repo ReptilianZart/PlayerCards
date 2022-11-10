@@ -36,6 +36,5 @@ export async function useGql(url) {
         .then(res => res.json())
         .then(json => setPlayers(json))
     },[url])
-    console.log(players)
     return { players }
 }
