@@ -54,7 +54,7 @@ function PlayerCard({ name, clan, country, playerData, playerStats }) {
                         </div>
                     </div>
 
-                    <vr className="Divider"></vr>
+                    <div className="Divider"></div>
 
                     <div className="ColoumnRight">
                         <div className="Stat">
