@@ -1,0 +1,17 @@
+.Header {
+    background: linear-gradient(45deg, rgba(30, 64, 175, 1) 0%, rgba(185, 28, 28, 1) 90%);
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    transition: 0.25s;
+}
+.Header:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+
+}
+
+.Header h1 {
+    margin: 0px;    
+    text-align: center;
+}

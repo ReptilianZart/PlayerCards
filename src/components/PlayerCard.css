@@ -2,62 +2,71 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
     width: 439px;
     height: 739px;
-    margin-top: 80px;
-    margin-bottom: 30px;
+    margin-top: 50px;
     margin-left: 50px;
     transition: 0.25s;
-    mix-blend-mode: normal;
-    background: rgb(30, 64, 175);
     background: linear-gradient(45deg, rgba(30, 64, 175, 1) 0%, rgba(185, 28, 28, 1) 90%);
 }
 
 .PlayerCard:hover {
     transform: scale(1.05);
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+    filter: brightness(110%)
 }
 
 /* TOP CONTAINER */
 .PlayerCard .TopContainer {
     position: flex;
-    width: 439px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
     height: 368px;
-    left: 159px;
-    top: 82px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(54.9deg, #1E40AF 0%, #B91C1C 100%);
+    margin: 10px;
+    overflow: hidden;
 }
 
-.PlayerCard .TopContainer .PlayerAvatar img {
-    position: absolute;
-    
-    left: 17.72%;
-    right: 17.46%;
-    top: 10.96%;
-    bottom: 32.45%;
+.PlayerCard .TopContainer .PlayerAvatar {
+    position: relative;
+    display: flex;
+    scale: 120%;
+    margin-top: 50px;
 }
-/* DIVIDER */
-.PlayerCard .CardDivider {
-    /* visibility: hidden; */
-    background-color: black;
-    width: 439px;
-    height: 30px;
+
+.PlayerCard .TopContainer .Flares {
+    position: absolute;
+    width: 481px;
+    height: 326px;
+}
+
+.PlayerCard .TopContainer .Flares svg{
+    position: relative;
 }
 
 /* OVR Score */
 .PlayerCard .ovrScore {
     position: absolute;
-    width: 97px;
-    height: 83.74px;
-    left: 329px;
-    top: 411px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 70px;
+    bottom: 326px; 
+    border: solid #EFF6FF;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #1E40AF;
+    z-index: 2;
 }
 
 .PlayerCard .ovrScore .Score {
-    position: absolute;
-    left: 46.32%;
-    right: 46.4%;
-    top: 47.08%;
-    bottom: 48.27%;
+    position: relative;
+    top: 19px;
+
 
     font-family: 'Russo One';
     font-style: normal;
@@ -77,11 +86,9 @@
 }
 
 .PlayerCard .ovrScore .Attribute {
-    position: absolute;
-    left: 44.07%;
-    right: 44.19%;
-    top: 51.67%;
-    bottom: 46.98%;
+    position: relative;
+
+    top: -42px;
 
     font-family: 'Teko';
     font-style: normal;
@@ -91,20 +98,22 @@
     /* or 18px */
 
     text-align: center;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
 
+    color: #FFFFFF99;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+
     mix-blend-mode: normal;
-    text-shadow: 0px 1.08079px 3.24236px rgba(0, 0, 0, 0.4);
 }
 
 /* BOTTOM CONTAINER */
 .PlayerCard .BottomContainer {
-    position: flex;
-    width: 439px;
-    height: 361px;
-    left: 159px;
-    top: 460px;
+    position: relative;
+    width: 95%;
+    height: 330px;
+    margin: auto;
+    background: linear-gradient(54.9deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 /* LEFT */
@@ -112,10 +121,11 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 
 .PlayerCard .BottomContainer .PlayerInfoLeft .Name {
-    position: absolute;
+    position: relative;
 
     font-family: 'Teko';
     font-style: normal;
@@ -134,11 +144,7 @@
 }
 
 .PlayerCard .BottomContainer .PlayerInfoLeft .Clan {
-    position: absolute;
-    left: 24.07%;
-    right: 66.67%;
-    top: 55.26%;
-    bottom: 43.19%;
+    position: relative;
 
     font-family: 'Inter';
     font-style: italic;
@@ -156,7 +162,6 @@
 
 /* RIGHT */
 .PlayerCard .BottomContainer .PlayerInfoRight {
-
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -165,14 +170,13 @@
     gap: 12px;
 
     position: absolute;
-    width: 64px;
-    height: 28px;
-    right: 184px;
-    top: 473px;
+    top: 0px;
+    right: 0px;
+    margin: 10px;
 }
 
-.PlayerCard .PlayerInfoRight .ClanImage img {
-    display: absolute;
+.PlayerCard .BottomContainer .PlayerInfoRight .ClanImage img {
+    display: block;
     width: 28px;
     height: 28px;
     /* Inside auto layout */
@@ -180,9 +184,10 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+    z-index: 5;
 }
 
-.PlayerCard .PlayerInfoRight .CountryImage img {
+.PlayerCard .BottomContainer .PlayerInfoRight .CountryImage img {
     display: absolute;
     width: 24px;
     height: 16px;
@@ -192,4 +197,82 @@
     flex: none;
     order: 1;
     flex-grow: 0;
+}
+
+/* STATS */
+.PlayerCard .BottomContainer .Stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 23px;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+.PlayerCard .BottomContainer .Stats .ColoumnLeft {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.PlayerCard .BottomContainer .Stats .Divider {
+    margin-top: 30px;
+    border-left: 2px solid #EFF6FF;
+    height: 196px;
+    
+}
+
+.PlayerCard .BottomContainer .Stats .ColoumnRight {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.PlayerCard .BottomContainer .Stats .Stat {
+    display: flex;
+    flex-direction: row;
+}
+
+.PlayerCard .BottomContainer .Stats .Score {
+    width: 60px;
+    height: 10px;
+
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+
+    text-align: right;
+
+    /* tailwind/blue/50 */
+
+    color: #EFF6FF;
+}
+
+.PlayerCard .BottomContainer .Stats .Att {
+    width: 77px;
+    height: 0px;
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+
+    margin-top: 41px;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    mix-blend-mode: normal;
+
+    color: #FFFFFF99;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+
+    mix-blend-mode: normal;
 }

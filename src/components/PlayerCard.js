@@ -22,35 +22,56 @@ function PlayerCard({ name, clan, country, playerData, playerStats }) {
             <div className="CardBorder"></div>
 
             <div className="TopContainer">
-                <div className="PlayerAvatar">
-                    <img src={playerImage.data && "data:image/webp;base64,".concat(playerImage.data.base64_image)}></img>
-                </div>
+                <img className="PlayerAvatar" src={playerImage.data && "data:image/webp;base64,".concat(playerImage.data.base64_image)} alt="playerAvatar"></img>
 
             </div>
-            
-            <hr className="CardDivider"></hr>
 
             <div className="BottomContainer">
                 <div className="PlayerInfoLeft">
-                    <p className="Name">{name}</p>
-                    <p className="Clan">{clan}</p>
+                    <div className="Name">{name}</div>
+                    <div className="Clan">{clan}</div>
                 </div>
 
                 <div className="PlayerInfoRight">
                     <div className="ClanImage">
-                        <img src={clanImage.data && "data:".concat(clanImage.data.mime_type, ";base64,", clanImage.data.base64_image)}></img>
+                        <img src={clanImage.data && "data:".concat(clanImage.data.mime_type, ";base64,", clanImage.data.base64_image)} alt="clanImage"></img>
                     </div>
                     <div className="CountryImage">
-                        <img src={countryImage.data && "data:image/webp;base64,".concat(countryImage.data.base64_image)}></img>
+                        <img src={countryImage.data && "data:image/webp;base64,".concat(countryImage.data.base64_image)} alt="countryImage"></img>
                     </div>
                 </div>
 
                 <div className="Stats">
-                    <div className="Coloumn">
-
+                    <div className="ColoumnLeft">
+                        <div className="Stat">
+                            <p className="Score">{playerStats.acc}</p>
+                            <p className="Att">ACC</p>
+                        </div>
+                        <div className="Stat">
+                            <p className="Score">{playerStats.imp}</p>
+                            <p className="Att">IMP</p>
+                        </div>
+                        <div className="Stat">
+                            <p className="Score">{playerStats.ast}</p>
+                            <p className="Att">AST</p>
+                        </div>
                     </div>
-                    <div className="Divider"></div>
-                    <div className="Coloumn">
+
+                    <vr className="Divider"></vr>
+
+                    <div className="ColoumnRight">
+                        <div className="Stat">
+                            <p className="Score">{playerStats.ent}</p>
+                            <p className="Att">ENT</p>
+                        </div>
+                        <div className="Stat">
+                            <p className="Score">{playerStats.utl}</p>
+                            <p className="Att">UTL</p>
+                        </div>
+                        <div className="Stat">
+                            <p className="Score">{playerStats.exp}</p>
+                            <p className="Att">EXP</p>
+                        </div>
 
                     </div>
                 </div>

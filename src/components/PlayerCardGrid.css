@@ -1,7 +1,8 @@
 .PlayerCardGrid {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     flex-flow: wrap;
-    overflow-y: scroll;
+    background-color: #333333;
+    margin: 0px;
 }
