@@ -8,9 +8,6 @@ function PlayerCard({ name, clan, country, playerData, playerStats }) {
     const playerImage = useFetch("http://office.skybox.gg:3000/resources/players/".concat(playerData.playerId))
     const clanImage = useFetch("http://office.skybox.gg:3000/resources/clans/".concat(playerData.clanId))
 
-    // to display
-    const statsName = ["ovr", "acc", "imp", "ast", "ent", "utl", "exp"]
-
     return (
         <div className="PlayerCard">
 
@@ -77,8 +74,6 @@ function PlayerCard({ name, clan, country, playerData, playerStats }) {
                 </div>
 
             </div>
-
-            <div className="CardBg"></div>
         </div>
     );
 }
